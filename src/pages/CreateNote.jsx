@@ -8,6 +8,7 @@ const CreateNote = ({ onNoteAdded }) => {
   const [isPinned, setIsPinned] = useState(false); // New state for pin state
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
