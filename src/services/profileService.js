@@ -6,6 +6,7 @@ export const getPublicProfile = async (userId) => {
   return response.data;
 };
 
+
 // Fetch public notes for a user with pagination
 export const getPublicNotes = async (userId, { page = 1, limit = 10 } = {}) => {
   const response = await api.get(`/mongo/public-notes/${userId}`, {
@@ -13,3 +14,4 @@ export const getPublicNotes = async (userId, { page = 1, limit = 10 } = {}) => {
   });
   return response.data; // { error, notes, page, limit, total, totalPages }
 };
+
